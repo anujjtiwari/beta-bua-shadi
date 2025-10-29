@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>शुभ विवाह आमंत्रण</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Yeseva+One&family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet">
+    <style>
+        html {
+            box-sizing: border-box;
+            font-size: 18px;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+       body {
+    font-family: 'Tiro Devanagari Sanskrit', 'Gotu', serif;
+    background-image: url('assets/images/background.png');
+    background-repeat: fill;
+    background-size: 1920px 1080px;
+}
+
+
+        .coverimg {
+            width: 100%;
+            max-height: 280px;
+            object-fit: cover;
+            border-radius: 0 0 36px 36px;
+            margin-bottom: -28px;
+            box-shadow: 0 12px 36px #fa8a30a0;
+            border-bottom: 7px double #c57012;
+        }
+        .card {
+            max-width: 780px;
+            margin: 40px auto 32px;
+            background: rgba(255, 251, 244, 0.85);
+            border-radius: 32px;
+            box-shadow: 0 12px 32px #eee2 , 0 2px 44px #fa8a3022;
+            padding: 40px 28px;
+            position: relative;
+            border: 4px solid #fcb219;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        /* DIVIDER PART  */
+        .divider {
+  width: 100%;
+  max-width: 800px;
+  margin: 36px auto 32px auto;
+  text-align: center;
+}
+.divider svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* DIVIDER PART ENDS  */
+
+
+
+        .sectionimg {
+            display: block;
+            margin: 24px auto 18px auto;
+            max-width: 90%;
+            border-radius: 16px;
+            border: 2px solid #FF0000;
+            box-shadow: 0 6px 24px #ffcba8c0;
+        }
+        .header {
+            font-size: 2.4rem;
+            color: #FF0000;
+            font-family: 'Yeseva One', cursive;
+            margin-bottom: 28px;
+            letter-spacing: 1px;
+            text-shadow: 0 3px 10px #fcb21960;
+            font-weight: bold;
+        }
+        .shlok {
+    font-family: 'Tiro Devanagari Sanskrit', 'Gotu', serif;
+    color: #7b410a;
+    background: #fffaf0;
+    border: 2px dashed #fcb219;
+    border-radius: 10px;
+    padding: 18px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+        .section-title {
+            font-size: 1.2rem;
+            color: #ee6124;
+            background: linear-gradient(90deg, #fff3b8 60%, #ffe1dc 100%);
+            border-radius: 8px;
+            margin: 33px 0 10px 0;
+            font-weight: bold;
+            padding: 6px 0;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 9px #ecc11a22;
+        }
+        .card * {
+            text-align: center;
+            font-weight: bold;
+        }
+        ul, li {
+            text-align: center !important;
+            list-style-type: none;
+            margin: 0 0 7px 0;
+            padding: 0;
+            color: #ae4b0e;
+            font-weight: bold;
+            font-size: 1.07rem;
+        }
+.sehnai-icon {
+    position: fixed;
+    top: calc(var(--toran-height, 140px) + 10px); /* dynamically under toran */
+    right: 24px;
+    z-index: 2000;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px #dc504230, 0 0 0 4px #fff2;
+    background: #fffdf5cc;
+    border: 2.5px solid #fcb219;
+    transition: filter 0.2s, top 0.3s ease;
+}
+
+/* Desktop defaults */
+:root {
+    --toran-height: 140px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    :root {
+        --toran-height: 100px;
+    }
+    .sehnai-icon {
+        right: 18px;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    :root {
+        --toran-height: 80px;
+    }
+    .sehnai-icon {
+        right: 12px;
+        width: 44px;
+        height: 44px;
+    }
+}
+
+
+        .sehnai-off {
+            filter: grayscale(80%) brightness(0.95) opacity(0.4);
+        }
+        .logo-img {
+    width: 100%;
+    max-width: 680px;     /* increased a lot for desktop */
+    height: auto;
+    display: block;
+    margin: 10px auto 32px auto;
+    filter: drop-shadow(0 6px 18px #fcb219aa);
+    transform: scale(1.15); /* makes it about 15% bigger visually */
+}
+
+
+
+        iframe.map {
+            width: 100%;
+            height: 300px;
+            border-radius: 13px;
+            margin-top: 19px;
+            border: 3px solid #fcb219;
+            box-shadow: 0 0 12px #fa8a3040;
+        }
+        .footer {
+    font-family: 'Tiro Devanagari Sanskrit', 'Gotu', serif;
+    font-size: 1.1rem;
+    color: #b04a0b;
+    background: linear-gradient(90deg, #fff8db 0%, #fff3b8 100%);
+    border: 2px solid #fcb219;
+    border-radius: 16px;
+    margin-top: 36px;
+    padding: 18px 10px 22px 10px;
+    box-shadow: 0 4px 16px #fcb21933, 0 2px 8px #fa8a3022;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px #ffffff80;
+}
+.toran-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    max-height: 160px;
+    object-fit: cover;  /* key change */
+    object-position: center;
+    z-index: 999;
+    pointer-events: none;
+    filter: drop-shadow(0 6px 12px #c1790060);
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* For mobile, make the toran smaller */
+@media (max-width: 768px) {
+    .toran-banner {
+        max-height: 100px;
+    }
+}
+@media (max-width: 480px) {
+    .toran-banner {
+        max-height: 80px;
+    }
+}
+
+/* Add top padding to body so content doesn't hide behind the Toran */
+body {
+    padding-top: 150px; /* matches toran height */
+}
+@media (max-width: 768px) {
+    body {
+        padding-top: 100px;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        padding-top: 80px;
+    }
+}
+
+
+        @media (max-width: 900px) {
+            .card { max-width: 97vw; padding: 18px 2vw; }
+            .coverimg { max-height: 170px;}
+        }
+        @media (max-width: 600px) {
+            html { font-size: 16px; }
+            .card {padding: 8px 0;}
+            .coverimg {max-height: 100px;}
+            .sehnai-icon {top:8px; right:8px; width:38px; height:38px;}
+            .footer { font-size: 0.94rem; }
+            .sectionimg {max-width: 100%; margin: 14px auto 10px auto;}
+            iframe.map { height: 178px; }
+        }
+        @media (max-width: 440px) {
+            html { font-size: 14px; }
+            .header { font-size: 1.15rem;}
+            .section-title, .shlok { font-size: 0.96rem;}
+        }
+
+        @media (max-width: 600px) {
+  .logo-img {
+    max-width: 420px;
+    transform: scale(1.1);
+  }
+}
+/* DIVIDER  */
+.mandala-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+  flex-wrap: nowrap;
+}
+
+.mandala-divider .line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #d4af37, transparent);
+  border-radius: 2px;
+}
+
+.mandala-divider .mandala {
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mandala-divider img {
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+}
+
+@media (max-width: 600px) {
+  .mandala-divider img {
+    width: 80px;
+  }
+}
+
+ /* DIVIDER  */
+
+
+    </style>
+</head>
+<body>
+<img src="assets/images/toran3.png" alt="Indian Toran" class="toran-banner">
+<!-- Sehnai Icon for mute/unmute -->
+<img id="sehnaiimg" class="sehnai-icon" src="sehnai.png" alt="शहनाई आइकन" onclick="toggleAudio()" title="शहनाई म्यूट/चालू"/>
+<audio id="shehnai-audio" src="sehnai-audio.mp3" autoplay loop></audio>
+<div class="card">
+
+    <div class="header"><img src="shubahvivah.png" alt="शुभ विवाह आमंत्रण" class="logo-img"> </div>
+    <div class="shlok">
+        श्री गणेशाय नमः <br>
+        सर्वमङ्गलमाङ्गल्ये शिवे सर्वार्थसाधिके <br>
+        शरण्ये त्र्यम्बके गौरी नारायणी नमोऽस्तु ते॥
+    </div>
+   <div class="mandala-divider">
+  <div class="line"></div>
+  <div class="mandala">
+    <span class="lotus"></span>
+  </div>
+  <div class="line"></div>
+</div>
+
+
+    <div class="section-title">मुख्य विवरण</div>
+    <p>
+        श्रीमान्<br>
+        बुक-पोस्ट<br>
+        शुभ-विवाह<br>
+        शनिवार, दिनांक 22 नवम्बर 2025<br>
+        सौ. कां. सरिता<br>
+        चि. अवनीश
+    </p>
+   <div class="mandala-divider">
+  <div class="line"></div>
+  <div class="mandala">
+    <img src="assets\images\ganesh.png" alt="Mandala Divider">
+  </div>
+  <div class="line"></div>
+</div>
+
+
+    <div class="section-title">परिवार और भेजने वाले</div>
+    <p>
+        प्रेषक :<br>
+        शिवरामजी तिवारी, सुरेश तिवारी<br>
+        ग्राम व पो. बड़गहन, जिला-आजमगढ़ (उ.प्र.)<br>
+        मो. 7426858841<br>
+        तिवारी परिवार<br>
+        आपका हार्दिक स्वागत करता हैं ।<br>
+        दीपक, पाली -9828266262
+    </p>
+    <img class="sectionimg" src="assets\images\Ganesh-on-lotus.png" alt="परिवार चित्र"/>
+   <div class="mandala-divider">
+  <div class="line"></div>
+  <div class="mandala">
+    <img src="assets\images\ganesh2.png" alt="Mandala Divider">
+  </div>
+  <div class="line"></div>
+</div>
+
+    <div class="section-title">मांगलिक क्षण</div>
+    <p>
+        卐 मांगलिक क्षण 卐<br>
+        वन्दनीय हैं श्री गणेश जी महाराज प्रतिफल है आपकी मंगल कामनाओं का<br>
+        अनुकम्पा हैं माँ अन्नपूर्णा जी की, संग है समस्त स्वजन एवं परिजन का<br>
+        अवसर है परिणय मिलन का, साक्षी है धरती, आकाश, सूरज, चन्द्र, वायु<br>
+        आशीष है आप सभी का, प्रतिक्षा है आपके स्नेहिल आशीर्वाद की<br>
+        गुंजन है मांगलिक वाद्य यन्त्रों का, निवेदन है आपके पधारने का
+    </p>
+   <div class="mandala-divider">
+  <div class="line"></div>
+  <div class="mandala">
+    <img src="assets\images\kalash2.png" alt="Mandala Divider">
+  </div>
+  <div class="line"></div>
+</div>
+
+    <div class="section-title">समारोह की तिथियाँ</div>
+    <ul>
+        <li>शुभ विवाह: 22 नवम्बर 2025, शनिवार</li>
+        <li>विदाई: 23 नवम्बर 2025, रविवार</li>
+        <li>स्थान: ग्राम व पो. बड़गहन, जिला-आजमगढ़, उत्तर प्रदेश</li>
+    </ul>
+    <iframe class="map" src="https://www.google.com/maps?q=Badgahan,+Azamgarh,+Uttar+Pradesh&output=embed"></iframe>
+    <img class="sectionimg" src="assets\images\function.png" alt="समारोह चित्र"/>
+   <div class="mandala-divider">
+  <div class="line"></div>
+  <div class="mandala">
+    <img src="assets\images\shadi.png" alt="Mandala Divider">
+  </div>
+  <div class="line"></div>
+</div>
+
+    <div class="section-title">वर–वधु विवरण</div>
+    <p>
+        आयुष्मती सरिता<br>
+        (सुपौत्री स्व. श्रीमती श्यामा देवी एवं स्व. श्री उमाशंकर तिवारी)<br>
+        (सुपुत्री श्रीमती मीना तिवारी – सुरेश तिवारी)<br>
+        संग<br>
+        आयुष्मान अवनीश मिश्र<br>
+        (सुपौत्र स्व. श्रीमती कलावतीदेवी – स्व. श्री सर्वदेव मिश्र)<br>
+        (सुपुत्र श्रीमती शशिकला देवी – श्री प्रमोद मिश्र ग्राम ताहिरपुर टढ़ियाँ आजमगढ़)
+    </p>
+    <img class="sectionimg" src="assets\images\groom-bride.png   " alt="वर-वधु चित्र"/>
+    <div class="divider"></div>
+    <div class="section-title">स्वागत व मनुहार</div>
+    <p>
+        दशनाभिलाषी:<br>
+        संदीप, सुनील, दिनेश, भरत, सर्वेश, विशाल, अरिहंत, अनुज, आर्यन, आनंद, आदर्श, अथर्व तथा समस्त तिवारी परिवार व मित्रगण<br>
+        स्वागताकांक्षी:<br>
+        कमलेश तिवारी, रमेश तिवारी, सुरेश तिवारी, मनोज तिवारी<br>
+        विनीत:<br>
+        शिवराम तिवारी, ग्राम व पो. बड़गहन, जिला-आजमगढ़ (उ.प्र.), मो. 7426858841
+    </p>
+    <p>
+        बाल मनुहार :<br>
+        ना कोई फोन ना कोई बहाना, मेरी बुआ की शादी में जरूर-जरूर से आना है<br>
+        आर्या, हनुषा, आंजनेय, जसिका, प्रिन्सा, अविका, एनी
+    </p>
+    <div class="footer">
+        सप्रेम निमंत्रण – तिवारी परिवार, बड़गहन, आजमगढ़
+    </div>
+</div>
+<script>
+    var started = false;
+    var audio = document.getElementById('shehnai-audio');
+    var icon = document.getElementById('sehnaiimg');
+    window.addEventListener('DOMContentLoaded', function () {
+        try {
+            audio.volume = 0.35;
+            audio.play().then(()=>{started = true;});
+        } catch(e){}
+    });
+    function toggleAudio() {
+        if (!started) {
+            audio.play();
+            started = true;
+            icon.classList.remove('sehnai-off');
+        } else {
+            audio.muted = !audio.muted;
+            if (audio.muted) {
+                icon.classList.add('sehnai-off');
+            } else {
+                icon.classList.remove('sehnai-off');
+            }
+        }
+    }
+</script>
+</body>
+</html>
